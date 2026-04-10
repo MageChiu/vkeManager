@@ -1,0 +1,25 @@
+AK: "your-access-key"
+SK: "your-secret-key"
+Region: "cn-beijing"
+Endpoint: "https://open.volcengineapi.com"
+
+cluster:
+  name: "demo-vke-cluster"
+  vpc_id: "vpc-xxxxxxxx"
+  subnet_ids:
+    - "subnet-xxxxxxxx"
+  kubernetes_version: "v1.28"
+  pod_cidr: "172.16.0.0/16"
+  service_cidr: "192.168.0.0/16"
+  api_server_public_access_enabled: true
+  api_server_subnet_ids:
+    - "subnet-xxxxxxxx"
+  cluster_type: "ManagedKubernetes"
+  description: "由 vke-manager 创建"
+
+permission:
+  grantee_id: "your-user-id"
+  grantee_type: "User"
+  role_name: "cluster-admin"
+  namespace: ""
+
